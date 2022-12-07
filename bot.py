@@ -227,7 +227,7 @@ class MyClient(discord.Client):
             return random_number
 
 client = MyClient()
-client.run('INSERT KEY HERE')
+client.run(process.env.DISCORD_KEY)
 
 
 
