@@ -3,6 +3,7 @@ import requests
 from class_manager import ClassManager
 from npc_manager import NpcManager
 import json
+import os
 
 
 class MyClient(discord.Client):
@@ -227,7 +228,9 @@ class MyClient(discord.Client):
             return random_number
 
 client = MyClient()
-client.run(process.env.DISCORD_KEY)
+os.environ.get('USER')
+print(os.environ.get('DISCORD_KEY'))
+client.run(os.environ.get('DISCORD_KEY'))
 
 
 
